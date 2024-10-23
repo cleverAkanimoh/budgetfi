@@ -11,11 +11,14 @@ const Layout = () => {
         tabBarStyle: {
           backgroundColor: Colors.grey,
           position: "absolute",
-          bottom: 40,
+          bottom: 20,
           justifyContent: "center",
           alignItems: "center",
           height: 63,
         },
+        tabBarShowLabel: false,
+        tabBarInactiveTintColor: "#999",
+        tabBarActiveTintColor: Colors.white,
       }}
     >
       <Tabs.Screen
