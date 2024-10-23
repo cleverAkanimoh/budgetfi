@@ -6,21 +6,65 @@ import Colors from "@/constants/Colors";
 
 const Layout = () => {
   return (
-    <Tabs>
-      <TabsNavigation
+    <Tabs
+      screenOptions={{
+        tabBarStyle: {
+          backgroundColor: Colors.grey,
+          position: "absolute",
+          bottom: 40,
+          justifyContent: "center",
+          alignItems: "center",
+          height: 63,
+        },
+      }}
+    >
+      <Tabs.Screen
         name="index"
-        NavigationIcon={SimpleLineIcons}
-        iconName="pie-chart"
+        options={{
+          tabBarIcon: ({ color, size, focused }) => (
+            <View
+              style={{
+                padding: 12,
+                borderRadius: 30,
+                backgroundColor: focused ? Colors.tintColor : Colors.grey,
+              }}
+            >
+              <SimpleLineIcons name="pie-chart" size={18} color={color} />
+            </View>
+          ),
+        }}
       />
-      <TabsNavigation
+      <Tabs.Screen
         name="transactions"
-        NavigationIcon={AntDesign}
-        iconName="swap"
+        options={{
+          tabBarIcon: ({ color, size, focused }) => (
+            <View
+              style={{
+                padding: 12,
+                borderRadius: 30,
+                backgroundColor: focused ? Colors.tintColor : Colors.grey,
+              }}
+            >
+              <AntDesign name="swap" size={18} color={color} />
+            </View>
+          ),
+        }}
       />
-      <TabsNavigation
+      <Tabs.Screen
         name="profile"
-        NavigationIcon={FontAwesome}
-        iconName="user-0"
+        options={{
+          tabBarIcon: ({ color, size, focused }) => (
+            <View
+              style={{
+                padding: 12,
+                borderRadius: 30,
+                backgroundColor: focused ? Colors.tintColor : Colors.grey,
+              }}
+            >
+              <FontAwesome name="user-o" size={18} color={color} />
+            </View>
+          ),
+        }}
       />
     </Tabs>
   );
