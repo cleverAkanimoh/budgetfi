@@ -21,7 +21,6 @@ const Layout = () => {
           paddingBottom: 8,
           borderRadius: 40,
           borderWidth: 1,
-          borderTopWidth: 1,
           borderColor: "#333",
           borderTopColor: "#333",
         },
