@@ -1,4 +1,4 @@
-import { FlatList, ListRenderItem, StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, View } from "react-native";
 import React from "react";
 import { SpendingType } from "@/types";
 import Colors from "@/constants/Colors";
