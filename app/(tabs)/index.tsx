@@ -3,6 +3,8 @@ import Colors from "@/constants/Colors";
 import { Stack } from "expo-router";
 import Header from "@/components/Header";
 import { PieChart } from "react-native-gifted-charts";
+import ExpensesBlock from "@/components/ExpensesBlock";
+import expensesData from "@/data/expenses.json";
 
 const HomePage = () => {
   const pieData = [
@@ -29,19 +31,20 @@ const HomePage = () => {
       text: "3%",
     },
   ];
+
   return (
     <>
       <Stack.Screen options={{ header: () => <Header /> }} />
-      <View style={[styles.container, { paddingTop: 60 }]}>
+      <View style={[styles.container, { paddingTop: 80 }]}>
         <ScrollView showsVerticalScrollIndicator={false}>
           <View
             style={{
-              justifyContent: "space-between",
               flexDirection: "row",
+              justifyContent: "space-between",
               alignItems: "center",
             }}
           >
-            <View style={{ gap: 10 }}>
+            <View style={{ gap: 6 }}>
               <Text style={styles.emphasisText}>
                 My <Text style={{ fontWeight: "700" }}>Expenses</Text>
               </Text>
@@ -52,11 +55,12 @@ const HomePage = () => {
                 <Text style={{ fontWeight: "400", fontSize: 22 }}>00</Text>
               </Text>
             </View>
-            <View>
+            <View style={{ paddingVertical: 30, alignItems: "center" }}>
               <PieChart
                 data={pieData}
                 donut
                 showGradient
+                // focusOnPress
                 semiCircle
                 sectionAutoFocus
                 radius={70}
@@ -75,19 +79,13 @@ const HomePage = () => {
                     >
                       47%
                     </Text>
-                    <Text
-                      style={{
-                        fontSize: 14,
-                        color: Colors.white,
-                      }}
-                    >
-                      Excellent
-                    </Text>
                   </View>
                 )}
               />
             </View>
           </View>
+
+          <ExpensesBlock expenseList={expensesData} />
         </ScrollView>
       </View>
     </>
