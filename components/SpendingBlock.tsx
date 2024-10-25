@@ -2,11 +2,25 @@ import { FlatList, ListRenderItem, StyleSheet, Text, View } from "react-native";
 import React from "react";
 import { SpendingType } from "@/types";
 import Colors from "@/constants/Colors";
-import { AirbnbIcon, FigmaIcon, NetflixIcon } from "@/constants/icons";
+import {
+  AirbnbIcon,
+  AmazonIcon,
+  FigmaIcon,
+  NetflixIcon,
+  ShoppingCartIcon,
+  SpotifyIcon,
+} from "@/constants/icons";
 
 const SpendingBlock = ({ spendingList }: { spendingList: SpendingType[] }) => {
   return (
-    <View style={{ marginVertical: 20, gap: 20, alignItems: "flex-start" }}>
+    <View
+      style={{
+        marginTop: 20,
+        gap: 20,
+        alignItems: "flex-start",
+        marginBottom: 120,
+      }}
+    >
       <Text style={styles.emphasisText}>
         July <Text style={{ fontWeight: "700" }}>Spending</Text>
       </Text>
@@ -28,13 +42,13 @@ const SpendingBlock = ({ spendingList }: { spendingList: SpendingType[] }) => {
                 flexDirection: "row",
                 justifyContent: "space-between",
                 alignItems: "center",
-                gap: 10,
+                marginLeft: 10,
                 flex: 1,
               }}
             >
               <View style={{ gap: 5 }}>
                 <Text
-                  style={[styles.text, { fontSize: 16, fontWeight: "700" }]}
+                  style={[styles.text, { fontSize: 16, fontWeight: "600" }]}
                 >
                   {item.name}
                 </Text>
@@ -59,9 +73,16 @@ const IconsBasedOnName = ({ name }: { name: string }) => {
   switch (name) {
     case "Netflix":
       return <SvgIcon Icon={NetflixIcon} />;
-    case "Freelancing":
+    case "Spotify":
+      return <SvgIcon Icon={SpotifyIcon} />;
+    case "Amazon":
+      return <SvgIcon Icon={AmazonIcon} />;
+    case "Figma":
       return <SvgIcon Icon={FigmaIcon} />;
-
+    case "Figma":
+      return <SvgIcon Icon={FigmaIcon} />;
+    case "Online Shopping":
+      return <SvgIcon Icon={ShoppingCartIcon} />;
     default:
       return <SvgIcon Icon={AirbnbIcon} />;
   }

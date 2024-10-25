@@ -34,11 +34,5 @@
         "name": "Online Shopping",
         "amount": "136.99",
         "date": "2024-05-012"
-    },
-    {
-        "id": "7",
-        "name": "Amazon",
-        "amount": "234.69",
-        "date": "2024-05-06"
     }
 ]
