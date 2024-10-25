@@ -96,7 +96,7 @@ const ExpensesBlock = ({ expenseList }: { expenseList: ExpenseType[] }) => {
   const _static = [{ name: "Add Item" }];
 
   return (
-    <View>
+    <View style={{ paddingVertical: 10 }}>
       <FlatList
         data={_static.concat(expenseList)}
         renderItem={renderItem}
@@ -113,12 +113,12 @@ export default ExpensesBlock;
 const styles = StyleSheet.create({
   expensesBlock: {
     backgroundColor: Colors.tintColor,
-    marginRight: 10,
-    gap: 8,
+    marginRight: 15,
+    gap: 10,
     // width: 100,
     minWidth: 100,
-    padding: 15,
-    borderRadius: 15,
+    padding: 20,
+    borderRadius: 20,
     alignItems: "flex-start",
     justifyContent: "space-between",
   },
