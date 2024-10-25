@@ -46,6 +46,6 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     padding: 8,
   },
-  text: { color: Colors.white, fontSize: 12 },
+  text: { color: Colors.white, fontSize: 12, fontWeight: "400" },
   emphasisText: { color: Colors.white, fontSize: 16 },
 });

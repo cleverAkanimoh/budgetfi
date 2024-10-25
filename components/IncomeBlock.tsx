@@ -37,7 +37,7 @@ const IncomeBlock = ({ incomeList }: { incomeList: IncomeType[] }) => {
           </TouchableOpacity>
         </View>
         <Text style={[styles.text, { fontSize: 12 }]}>{item.name}</Text>
-        <Text style={[styles.text, { fontSize: 16, fontWeight: "700" }]}>
+        <Text style={[styles.text, { fontSize: 18, fontWeight: "600" }]}>
           ${amountPrefix}.
           <Text style={{ fontWeight: "400", fontSize: 12 }}>
             {amountSuffix}

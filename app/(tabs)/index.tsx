@@ -7,6 +7,8 @@ import ExpensesBlock from "@/components/ExpensesBlock";
 import expensesData from "@/data/expenses.json";
 import IncomeBlock from "@/components/IncomeBlock";
 import incomeData from "@/data/income.json";
+import SpendingBlock from "@/components/SpendingBlock";
+import spendingData from "@/data/spending.json";
 
 const HomePage = () => {
   const pieData = [
@@ -53,7 +55,7 @@ const HomePage = () => {
               <Text
                 style={{ fontWeight: "700", fontSize: 32, color: Colors.white }}
               >
-                $1475.
+                $1,475.
                 <Text style={{ fontWeight: "400", fontSize: 22 }}>00</Text>
               </Text>
             </View>
@@ -89,6 +91,7 @@ const HomePage = () => {
 
           <ExpensesBlock expenseList={expensesData} />
           <IncomeBlock incomeList={incomeData} />
+          <SpendingBlock spendingList={spendingData} />
         </ScrollView>
       </View>
     </>
